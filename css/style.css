@@ -1,0 +1,20 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --black:black;
+}
+body{
+  font-family:"Quicksand";
+    
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
