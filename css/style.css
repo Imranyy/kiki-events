@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Rubik+Glitch&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&family=Rubik+Glitch&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Moon+Dance:wght@300;400;500;600;700&display=swap');
 *{
@@ -7,14 +8,156 @@
 }
 :root{
   --black:black;
+  --grey-text:gray;
+  --border-bottom:0 5px 20px 0 rgba(110, 7, 70, 0.1);
+  --pink:rgb(223, 123, 140);
+  --background-pink:rgb(253, 251, 251);
 }
 body{
   font-family:"Quicksand";
-    
+  background: var(--background-pink);
 }
-a{
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding:20px 50px;
+  background: var(--background-pink);
+  box-shadow: var(--border-bottom);
+  position:fixed;
+  top:0;
+  left:0;
+  right: 0;
+  z-index: 200;
+}
+nav .brand{
+  font-family: "Moon Dance";
+  font-size: larger;
+  cursor: pointer;
+}
+.pink{
+  color:var(--pink);
+}
+nav ul,nav .more ul{
+  list-style: none;
+  display: flex;
+  padding: 10px 0;
+}
+nav ul li,nav .more ul li{
+  padding: 0 20px;
+}
+nav ul li a,nav .more ul li a{
+  color: var(--pink); 
   text-decoration: none;
 }
-ul{
-  list-style: none;
+.menu-btn{
+  display: none;
+  position: fixed;
+  right: 2px;
+  margin-top: -8px;
+  font-size: 25px;
+}
+.active,nav ul li a:hover{
+  color: var(--black);
+  border-bottom: solid 1px black;
+}
+nav .more ul li a:hover{
+  border: none;
+}
+.body{
+  padding: 18vh 50px;
+}
+.body .header{
+  color: var(--grey-text);
+}
+.body .hero-section{
+  padding: 25px 0;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+}
+.body .hero-section article{
+  /* align-self: center; */
+  padding: 28vh 0 0 0;
+}
+.body .hero-section article h1{
+  font-family:"Raleway";
+  font-size: 60px;
+}
+.body .hero-section article h1::after{
+  content: '—';
+  display: block;
+}
+.body .hero-section article p{
+  padding:5px 30px ;
+  line-height: 25px;
+}
+.hero-section img{
+  border: 0;
+  width: 90%;
+  height: 80vh;
+  box-shadow: 0 5px 20px 0 rgb(11 7 110 / 40%);
+}
+.event-section{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+.event-section img{
+  width: 29vw;
+  height: 401px;
+}
+
+/* landing page css */
+.landing{
+  padding: 69px 0;
+}
+.landing .hero-image{
+  background:  linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('../assests/img13.jpeg') no-repeat center;
+  background-size: cover;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.book-btn{
+  color: white;
+  background: var(--pink);
+  border: none;
+  border-radius: 50px;
+  margin-top: 50px;
+  padding: 15px 20px;
+  font-size: medium;
+  cursor: pointer;
+  transition: ease-in-out 500ms;
+}
+.book-btn:hover{
+  background: rgba(0, 0, 0, 0.8);
+  border: solid 2px var(--pink);
+  border-radius: 5px;
+}
+.landing .hero-image h1{
+  text-transform: uppercase;
+}
+.about{
+  padding: 10px 0 0 0;
+}
+.about .content{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 20px 50px;
+  gap: 20px;
+}
+.content img{
+  width: 43vw;
+  height: 400px;
+}
+.content .text{
+  align-self: center;
+  font-size: medium;
+  line-height: 25px;
+}
+.text p{
+  font-size: 17px;
 }
