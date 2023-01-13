@@ -11,6 +11,7 @@
   --grey-text:gray;
   --border-bottom:0 5px 20px 0 rgba(110, 7, 70, 0.1);
   --pink:rgb(223, 123, 140);
+  --pink-text:rgb(211, 73, 96);
   --background-pink:rgb(253, 251, 251);
 }
 body{
@@ -159,6 +160,37 @@ nav .more ul li a:hover{
 .about .text p{
   font-size: 17px;
 }
-.hist{
-  background: var(--background-pink);
+/* footer */
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+footer{
+  padding: 50px;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  background: pink;
+}
+footer .info{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+footer a{
+  color: var(--grey-text);
+  font-size: medium;
+}
+footer a:hover{
+  color: var(--blue);
+}
+footer .social-media-links ul{
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 0 0;
+}
+footer .social-media-links ul li a{
+  padding: 0 3vw;
+  font-size: 20px;
 }

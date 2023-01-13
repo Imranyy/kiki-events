@@ -1,0 +1,27 @@
+@media screen and (max-width:1000px) {
+    footer .info{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+    footer .info .container{
+        justify-self: center;
+    }
+}
+@media screen and (max-width:800px){
+    nav .brand{
+        margin-left: -30px;
+    }
+    nav .nav-link{
+        display:none;
+    }
+    .menu-btn{
+        display: block;
+    }
+}
+@media screen and (max-width:600px){
+    footer .info{
+        display: flex;
+        flex-direction: column;
+    }
+}
