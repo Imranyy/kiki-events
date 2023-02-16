@@ -5,6 +5,7 @@ import img2 from  "../assests/img2.jpeg";
 import img3 from  "../assests/img3.jpeg";
 import img4 from  "../assests/img4.jpeg";
 import img5 from  "../assests/img5.jpeg";
+import { motion } from 'framer-motion';
 
 function Events(props) {
     const eventImages=[
@@ -29,7 +30,15 @@ function Events(props) {
 
                 <div class="hero-section">
                     <div>
-                      <a href={img2} target='_blank' rel='noreferrer'><img src={img2} alt="Kiki events images"/></a>
+                      <a href={img2} target='_blank' rel='noreferrer'>
+                        <motion.img 
+                          initial={{scale:0}}
+                          animate={{scale:1}}
+                          transition={{duration:1}}
+                          src={img2} 
+                          alt="Kiki events images"
+                        />
+                      </a>
                     </div>
                     <article>
                     <h1>KiKi Events</h1>
@@ -43,7 +52,15 @@ function Events(props) {
 
                 <div class="event-section">
                     {eventImages&&eventImages.map(i=>(
-                        <a href={i.img} target="_blank" rel="noreferrer"><img src={i.img} alt="Kiki events images"/></a>
+                        <a href={i.img} target="_blank" rel="noreferrer">
+                          <motion.img 
+                            src={i.img} 
+                            alt="Kiki events images"
+                            initial={{scale:0}}
+                            whileInView={{scale:1}}
+                            transition={{duration:1}}
+                          />
+                        </a>
                     ))}
                 </div>
 
