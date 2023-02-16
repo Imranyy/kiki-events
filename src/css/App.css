@@ -15,7 +15,7 @@
   --background-pink:rgb(253, 251, 251);
 }
 body{
-  font-family:"Quicksand";
+  font-family:"Raleway";
   background: var(--background-pink);
 }
 nav{
@@ -56,6 +56,39 @@ nav ul li a,nav .more ul li a{
   right: 2px;
   margin-top: -8px;
   font-size: 25px;
+  color: var(--pink-text);
+  cursor: pointer;
+}
+.menu-bg{
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--background-pink);
+  backdrop-filter: 3rem;
+  z-index: 210;
+  cursor: pointer;
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: left;
+}
+.menu ul li{
+  margin: 20px 0;
+}
+.menu a{
+  color: var(--pink-text);
+  font-size: larger;
 }
 .active,nav ul li a:hover{
   color: var(--black);
@@ -81,7 +114,6 @@ nav .more ul li a:hover{
   padding: 15vh 0 0 0;
 }
 .body .hero-section article h1{
-  font-family:"Raleway";
   font-size: 60px;
 }
 .body .hero-section article h1::after{
@@ -95,8 +127,9 @@ nav .more ul li a:hover{
 .hero-section img{
   border: 0;
   width: 90%;
-  height: 75vh;
+  min-height: 40vw;
   box-shadow: 0 5px 20px 0 rgb(11 7 110 / 40%);
+  border-radius: 10px;
 }
 .event-section{
   display: grid;
@@ -106,6 +139,7 @@ nav .more ul li a:hover{
 .event-section img{
   width: 29vw;
   height: 401px;
+  border-radius: 10px;
 }
 
 /* landing page css */
@@ -151,6 +185,8 @@ nav .more ul li a:hover{
 .about img{
   width: 43vw;
   height: 400px;
+  box-shadow: 0 5px 20px 0 rgb(11 7 110 / 40%);
+  border-radius: 10px;
 }
 .about .text{
   align-self: center;

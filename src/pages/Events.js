@@ -1,12 +1,25 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
+import img2 from  "../assests/img2.jpeg";
+import img3 from  "../assests/img3.jpeg";
+import img4 from  "../assests/img4.jpeg";
+import img5 from  "../assests/img5.jpeg";
 
 function Events(props) {
     const eventImages=[
-        "./assests/img3.jpeg",
-        "./assests/img4.jpeg",
-        "./assests/img5.jpeg"
+      {
+        id:1,
+        img: img3
+      },
+      {
+        id:2,
+        img: img4
+      },
+      {
+        id:3,
+        img: img5
+      }
     ]
     return (
         <>
@@ -16,7 +29,7 @@ function Events(props) {
 
                 <div class="hero-section">
                     <div>
-                    <img src="./assests/img2.jpeg" alt="Kiki events images"/>
+                      <a href={img2} target='_blank' rel='noreferrer'><img src={img2} alt="Kiki events images"/></a>
                     </div>
                     <article>
                     <h1>KiKi Events</h1>
@@ -29,9 +42,9 @@ function Events(props) {
                 </div>
 
                 <div class="event-section">
-                    <img src={eventImages[0]} alt="Kiki events images"/>
-                    <img src={eventImages[1]} alt="Kiki events images"/>
-                    <img src={eventImages[2]} alt="Kiki events images"/>
+                    {eventImages&&eventImages.map(i=>(
+                        <a href={i.img} target="_blank" rel="noreferrer"><img src={i.img} alt="Kiki events images"/></a>
+                    ))}
                 </div>
 
             </div>

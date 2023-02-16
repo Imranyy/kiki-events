@@ -1,24 +1,44 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function NavBar(props) {
+    function openMenu(){
+        document.querySelector('.menu-bg').style.display='block'
+    }
+    function closeMenu(){
+        document.querySelector('.menu-bg').style.display='none'
+    }
     return (
-        <nav>
-            <div class='brand'>
-            <h2><span class='pink'>Kiki</span> Events</h2>
+        <>
+            <nav>
+                <div className='brand'>
+                    <h2><span className='pink'>Kiki</span> Events</h2>
+                </div>
+                <ul className="nav-link" role='navigation'>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/events">Events</Link></li>
+                    <li><Link to="/gallery">Gallery</Link></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+                <div className="more">
+                    <ul>
+                        <li className="nav-link"><a href="tel:0728466269" target="_blank"><i className="fa fa-phone"></i> +254728466269</a></li>
+                        <li className="menu-btn" onClick={openMenu}><i className="fa fa-list"></i></li>
+                    </ul>
+                </div>
+            </nav>
+            <div className="menu-bg"  onClick={closeMenu}>
+                <div className='menu'>
+                    <ul className="nav-link" role='navigation'>
+                        <li onClick={closeMenu}><Link to="/">Home</Link></li>
+                        <li onClick={closeMenu}><Link to="/events">Events</Link></li>
+                        <li onClick={closeMenu}><Link to="/gallery">Gallery</Link></li>
+                        <li onClick={closeMenu}><a href="#contact">Contact Us</a></li>
+                        <li onClick={closeMenu} className="nav-link"><a href="tel:0728466269" target="_blank"><i className="fa fa-phone"></i> +254728466269</a></li>
+                    </ul>
+                </div>
             </div>
-            <ul class="nav-link" role='navigation'>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-            <div class="more">
-            <ul>
-                <li class="nav-link"><a href="tel:0754423664" target="_blank"><i class="fa fa-phone"></i> +254754423664</a></li>
-                <li class="menu-btn"><a href="#"><i class="fa fa-list"></i></a></li>
-            </ul>      
-            </div>
-        </nav>
+        </>
     );
 }
 

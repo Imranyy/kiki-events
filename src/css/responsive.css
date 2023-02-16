@@ -1,4 +1,32 @@
 @media screen and (max-width:1000px) {
+    .body .hero-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .body .hero-section article{
+        padding: 0;
+    }
+    .body .hero-section article h1{
+        font-size: 7vw;
+    }
+    .body .hero-section article p{
+        padding:5px 0;
+    }
+    .hero-section img{
+        width: 75vw;
+        height: 63vw;
+    }
+    .event-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .event-section img{
+        width: 70vw;
+        height: 60vw;
+    }
+
     footer .info{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -18,8 +46,22 @@
     .menu-btn{
         display: block;
     }
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about img{
+        display: none;
+    }
 }
 @media screen and (max-width:600px){
+    .landing .hero-image h1{
+        font-size: 7vw;
+      }
+    .landing .hero-image h3{
+        font-size: 4vw;
+      }
     footer .info{
         display: flex;
         flex-direction: column;
