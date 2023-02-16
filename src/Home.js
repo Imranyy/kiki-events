@@ -25,7 +25,7 @@ const Home = () => {
                     <div className="about" id="about">
                         <motion.a 
                         href={img2} target='_blank' rel="noreferrer"
-                        initial={{x:"80vw"}}
+                        initial={{x:"40vw"}}
                         whileInView={{x:0}}
                         transition={{duration:1}}
                         >
@@ -52,7 +52,7 @@ const Home = () => {
                         </div>
                         <motion.a 
                         href={img4} target='_blank' rel="noreferrer"
-                        initial={{x:"-80vw"}}
+                        initial={{x:"-40vw"}}
                         whileInView={{x:0}}
                         transition={{duration:1}}
                         >
